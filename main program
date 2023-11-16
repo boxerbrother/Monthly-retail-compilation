@@ -1,0 +1,23 @@
+# This project is to automate the compilation of retailer's monthly retail.
+# Inputs: 'CWPR'
+# Output: Monthly_retailerwise_retail
+
+import pandas as pd
+import time
+import os
+import datetime
+
+if __name__ == "__main__":
+    month_name= input('Enter the month name for which CWPR needs to be compiled : ')
+    file = input("Enter the path for CWPR: ")
+    def filereader (file)
+        #checking whether the file path is correct.
+        if not (os.path.isfile(file)):
+            print("The entered file doesn't exists")
+            exit()
+        else:
+            print("CWPR File provided is valid %s", file)
+    #Reading the CWPR excel sheet
+        sheets = pd.read_excel(file, engine="openpyxl", usecols=None,sheet_name=None,converters={'Customer Code':str})
+
+
